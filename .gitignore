@@ -49,3 +49,7 @@ jspm_packages
 .yarn-integrity
 
 
+# jetbrain project file
+.idea
+
+
