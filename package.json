@@ -1,11 +1,11 @@
 {
   "name": "hanbao",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {
     "lodash": "^4.17.4"
   },
   "main": "lib/index.js",
-  "repository":{
+  "repository": {
     "type": "git",
     "url": "https://github.com/qweasd1/hanbao.git"
   },
