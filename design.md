@@ -121,3 +121,6 @@
    
 ## hanbao-utils
 * assert throw errors if you want
+* load npm nodule in both absolute and relative path
+* load module or factory
+    * you can defined the factory field name(e.g. "plugin") or factory options field name(e.g. "options")
