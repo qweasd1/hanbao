@@ -98,10 +98,16 @@ _.merge(p3,{
 })
 
 Manager({
+  workingDir:__dirname,
   plugins:[
     p1,
     p2,
-    p3
+    p3,
+    "./externalplugin",
+    {
+      plugin:"./pluginfactory",
+      options:{name:"test"}
+    }
   ]
 }).init(function (err,manager){
   

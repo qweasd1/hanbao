@@ -1,7 +1,12 @@
 # Design
 
 
+
 ## Manager
+* options
+    * plugins [must be array]
+    * utils [optional]
+    * path [required]: working dir, when you load npm module by relative way, the working directoy set as the prefix
 * model
     * name
 * service
@@ -65,6 +70,18 @@
     * [TODO] 
         * what happened if error is string? // can't set plugin on it
         * [done] what if throw exception? (we need to try catch the run)
+        
+        
+* plugin loading
+    * the workingDir must be set on hanbao (used to resolve user defined plugins )
+    * plugin loading type
+        * single string
+            * relative path: load plugin from "workingDir/relativepath"
+            * npm module name: load plugin from npm module
+        * array
+            * flatten the array and load inner plugins
+        * object ( {plugin:createPlugin(options) or string, options:obj}) // this actually pass the factory for plugin 
+            * call the plugin factory with options you provide
 ### Plugin model
 * function
 * info
@@ -98,3 +115,9 @@
 * issue
     * if you reprocess a model, which has reprocess called in previous processor, it will again reprocess the previous processor, which result in previous reprocess might be called more than 1 time
         * [solution] when call reprocess, all nested reprocess for the same model is skipped
+        
+        
+        
+   
+## hanbao-utils
+* assert throw errors if you want
