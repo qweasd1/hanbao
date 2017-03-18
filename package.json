@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/qweasd1/hanbao.git"
   },
-  "description": "run time for model driven development",
+  "description": "runtime for model driven development",
   "maintainers": [
     {
       "name": "tony",
