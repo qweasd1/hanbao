@@ -12,6 +12,8 @@
         * patternMatch
         * assert
     * currently we suppose util not rely on other util 
+    * [!] modify get to let it accept several paths, and return the first find
+        * so users can get config value more easily
 * plugins
     * info
     * <func>(manager,next)
