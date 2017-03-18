@@ -6,6 +6,7 @@ const Manager = require('./../lib/index');
 const _ = require('lodash');
 
 let p1 = function (manager,next){
+  manager.addService("new1",{})
   
   manager.addModel({name:`p1-model-1`})
   // manager.addModel({name:"p1-model-2"})
@@ -109,7 +110,8 @@ Manager({
     console.log(err);
   }
   else {
-    console.log(manager);
+    
+    console.log(manager.hasService("new1"));
   }
   
 })
