@@ -96,28 +96,34 @@ _.merge(p3,{
   utils:{a:1},
   info:{name:"p3"}
 })
-
-Manager({
-  workingDir:__dirname,
-  plugins:[
-    p1,
-    p2,
-    p3,
-    "./externalplugin",
-    {
-      plugin:"./pluginfactory",
-      options:{name:"test"}
-    }
-  ]
-}).init(function (err,manager){
-  
-  
-  if(err){
-    console.log(err);
-  }
-  else {
+try {
+  Manager({
+    workingDir:__dirname,
+    plugins:[
+      p1,
+      p2,
+      p3,
+      "./externalplugin",
+      {
+        plugin:"./pluginfactory",
+        options:{name:"test"}
+      }
+    ]
+  }).init(function (err,manager){
     
-    console.log(manager.hasService("new1"));
-  }
-  
-})
+    
+    if(err){
+      console.log(err);
+    }
+    else {
+      
+      console.log(manager.hasService("new1"));
+    }
+    
+  })
+}
+
+catch (err){
+  console.log(err);
+}
+
